@@ -17,9 +17,11 @@
     "sinon-chai": "^2.7.0"
   },
   "devDependencies": {
+    "@types/faker": "^5.5.8",
     "@types/jest": "^27.0.1",
     "@types/mocha": "^9.0.0",
     "@types/typescript": "^2.0.0",
+    "faker": "^5.5.3",
     "jest": "^27.1.0",
     "ts-jest": "^27.0.5",
     "typescript": "^4.4.2"
