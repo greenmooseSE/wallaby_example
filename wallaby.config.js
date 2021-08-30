@@ -1,11 +1,13 @@
 module.exports = function() {
   return {
     files: [
-      'src/*.js'
+      'src/*.js',
+      'src/*.ts'
     ],
 
     tests: [
-      'test/*.test.js'
+      'test/*.test.js',
+      'test/*.test.ts'
     ],
 
     env: {

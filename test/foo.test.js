@@ -7,6 +7,14 @@ chai.use(require('sinon-chai'));
 describe('hi', function() {
   var clock, foo;
 
+  async function sleep(ms) {
+    await _sleep(ms);
+  }
+
+  function _sleep(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
   beforeEach(function() {
     clock = sinon.useFakeTimers();
     foo = new Foo();
@@ -15,6 +23,11 @@ describe('hi', function() {
   afterEach(function() {
     clock.reset();
     foo.stop();
+  });
+
+  it("can perf-measure await", async () => {
+      await sleep(200); /*?.*/
+      console.log('test'); /*?.*/
   });
 
   it('asdf', function(done) {
